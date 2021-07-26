@@ -1,0 +1,29 @@
+#ifndef	_RPI4_H
+#define	_RPI4_H
+
+#define PBASE 0xFE000000
+
+/* GPIO */
+#define GPIO_BASE (PBASE + 0x00200000)
+#define GPFSEL1   (GPIO_BASE + 0x4)
+#define GPSET0    (GPIO_BASE + 0x1C)
+#define GPCLR0    (GPIO_BASE + 0x28)
+#define GPPUD     (GPIO_BASE + 0x94)
+#define GPPUDCLK0 (GPIO_BASE + 0x98)
+
+/* MINI UART */
+#define MINI_UART_BASE (PBASE + 0x00215000)
+#define AUX_ENABLES     (MINI_UART_BASE + 0x4)
+#define AUX_MU_IO_REG   (MINI_UART_BASE + 0x40)
+#define AUX_MU_IER_REG  (MINI_UART_BASE + 0x44)
+#define AUX_MU_IIR_REG  (MINI_UART_BASE + 0x48)
+#define AUX_MU_LCR_REG  (MINI_UART_BASE + 0x4C)
+#define AUX_MU_MCR_REG  (MINI_UART_BASE + 0x50)
+#define AUX_MU_LSR_REG  (MINI_UART_BASE + 0x54)
+#define AUX_MU_MSR_REG  (MINI_UART_BASE + 0x58)
+#define AUX_MU_SCRATCH  (MINI_UART_BASE + 0x5C)
+#define AUX_MU_CNTL_REG (MINI_UART_BASE + 0x60)
+#define AUX_MU_STAT_REG (MINI_UART_BASE + 0x64)
+#define AUX_MU_BAUD_REG (MINI_UART_BASE + 0x68)
+
+#endif  /*_RPI4_H */
