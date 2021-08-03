@@ -1,3 +1,4 @@
 arm_64bit=1
 enable_gic=0
 enable_uart=1
+armstub=armstub8.bin
