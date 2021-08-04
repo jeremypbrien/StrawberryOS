@@ -36,7 +36,7 @@
 #include "printf.h"
 
 // Attach printf to our mini_uart device
-#include "mini_uart.h"
+#include "drivers/mini_uart.h"
 void _putchar(char c) {
   uart_send(c);
 } /* _putchar() */

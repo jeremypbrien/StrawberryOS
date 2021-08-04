@@ -2,8 +2,9 @@
 Bare Metal Operating System for Raspberry Pi 4B
 
 # Features
-- Mini UART support
 - Exception level handling
+- Interrupt handling
+- Mini uart + system timer drivers
 
 # Install
 1) Run ```make```

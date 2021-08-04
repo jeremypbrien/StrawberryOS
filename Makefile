@@ -13,15 +13,15 @@ all: $(KERNEL_IMG)
 
 .PHONY: clean
 clean:
-    rm -rf $(BUILD_DIR)
+	rm -rf $(BUILD_DIR)
 
 $(BUILD_DIR)/%_c.o: $(SRC_DIR)/%.c
-    mkdir -p $(@D)
-    $(ARMGNU)-gcc $(CARGS) -MMD -c $< -o $@
+	mkdir -p $(@D)
+	$(ARMGNU)-gcc $(CARGS) -MMD -c $< -o $@
 
 $(BUILD_DIR)/%_s.o: $(SRC_DIR)/%.S
-    mkdir -p $(@D)
-    $(ARMGNU)-gcc $(ASMARGS) -MMD -c $< -o $@
+	mkdir -p $(@D)
+	$(ARMGNU)-gcc $(ASMARGS) -MMD -c $< -o $@
 
 
 C_FILES := $(shell find $(SRC_DIR) -name '*.c')
@@ -31,5 +31,5 @@ OBJ_FILES += $(ASM_FILES:$(SRC_DIR)/%.S=$(BUILD_DIR)/%_s.o)
 
 
 $(KERNEL_IMG): $(LINKER_FILE) $(OBJ_FILES)
-    $(ARMGNU)-ld -T $(LINKER_FILE) -o $(BUILD_DIR)/$(KERNEL_ELF) $(OBJ_FILES)
-    $(ARMGNU)-objcopy $(BUILD_DIR)/$(KERNEL_ELF) -O binary $(BUILD_DIR)/$(KERNEL_IMG)
+	$(ARMGNU)-ld -T $(LINKER_FILE) -o $(BUILD_DIR)/$(KERNEL_ELF) $(OBJ_FILES)
+	$(ARMGNU)-objcopy $(BUILD_DIR)/$(KERNEL_ELF) -O binary $(BUILD_DIR)/$(KERNEL_IMG)
