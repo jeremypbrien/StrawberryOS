@@ -1,5 +1,5 @@
-#ifndef	_MM_H
-#define	_MM_H
+#ifndef _MM_H
+#define _MM_H
 
 #define LOW_MEMORY (0x400000)
 

@@ -1,5 +1,5 @@
-#ifndef	_RPI4_H
-#define	_RPI4_H
+#ifndef _RPI4_H
+#define _RPI4_H
 
 #define PBASE 0xFE000000
 
