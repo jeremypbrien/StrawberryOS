@@ -89,6 +89,7 @@ void _putchar(char c) {
 // support for the ptrdiff_t type (%t)
 // ptrdiff_t is normally defined in <stddef.h> as long or long long type
 // default: activated
+#define PRINTF_DISABLE_SUPPORT_PTRDIFF_T
 #ifndef PRINTF_DISABLE_SUPPORT_PTRDIFF_T
 #define PRINTF_SUPPORT_PTRDIFF_T
 #endif

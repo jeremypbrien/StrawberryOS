@@ -1,7 +1,7 @@
 #ifndef _ARM_IVT_H
 #define _ARM_IVT_H
 
-#define STACK_FRAME_SIZE        256
+#define STACK_FRAME_SIZE        272
 
 #define SYNC_INVALID_EL1t       0 
 #define IRQ_INVALID_EL1t        1 

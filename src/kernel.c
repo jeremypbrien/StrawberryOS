@@ -3,6 +3,7 @@
 #include "irq.h"
 #include "drivers/timer.h"
 #include "drivers/mini_uart.h"
+#include "sched.h"
 
 
 void kernel_main(void)
@@ -19,7 +20,9 @@ void kernel_main(void)
     printf("StrawberryOS booted!\r\n");
     printf("Current exception level: %d\r\n", get_el());
     
-    /* For now hang indefinitely */
+    /* For now yield cpu indefinitely */
     while (1) {
+        printf("Yielding cpu\r\n");
+        yield_cpu();
     }
 } /* kernel_main() */
