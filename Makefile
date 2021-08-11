@@ -4,7 +4,7 @@ ASMARGS = -MMD -Iinclude
 
 BUILD_DIR := build
 SRC_DIR := src
-LINKER_FILE := $(SRC_DIR)/linker.ld
+LINKER_FILE := $(SRC_DIR)/kernel/linker.ld
 KERNEL_ELF := kernel8.elf
 KERNEL_IMG := kernel8.img
 
