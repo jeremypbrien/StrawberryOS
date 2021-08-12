@@ -4,6 +4,7 @@
 #include "drivers/timer.h"
 #include "drivers/mini_uart.h"
 #include "sched.h"
+#include "shell.h"
 
 
 void kernel_main(void)
@@ -17,12 +18,9 @@ void kernel_main(void)
     enable_interrupt_controller();
     enable_irq();
 
-    printf("StrawberryOS booted!\r\n");
-    printf("Current exception level: %d\r\n", get_el());
-    
-    /* For now yield cpu indefinitely */
-    while (1) {
-        printf("Yielding cpu\r\n");
-        yield_cpu();
-    }
+    /* Init process will be the shell process which doesn't return */
+    start_shell();
+
+    /* Should never get here */
+    while (1);
 } /* kernel_main() */
